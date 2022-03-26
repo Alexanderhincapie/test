@@ -1,8 +1,10 @@
 package com.tdea.parcial.gluecode;
 
+import com.tdea.parcial.Utils;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -16,23 +18,22 @@ public class Test {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.google.com/");
-
     }
 
-    @Given("testGiven")
-    public void test_given() {
-        setUp();
-    }
+    private int Hora;
+    private String Hour;
 
-    @When("testWhen")
-    public void test_when() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
+    @Given("Hora {int}")
+    public void hora(Integer Hora) {
+        Hora = 4;
 
-    @Then("testThen")
-    public void test_then() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    }
+    @When("verificamos que sea Night")
+    public void verificamos_que_sea_night() {
+        Assertions.assertEquals("Night", Utils.getTimeOfDay(Hora));
+    }
+    @Then("Obtenemos Night")
+    public void obtenemos_night() {
+
     }
 }

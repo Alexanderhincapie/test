@@ -1,0 +1,5 @@
+1. el primer test lo intente realizar en con cucumber, ingresando el numero 4 para verificar que sea Night
+2. el segundo test lo hice ingresando el numero 9 para verificar que sea Morning
+3. el tercer test lo hice ingresando el numero 15 para verificar que sea Afternoon
+4. el cuarto test  lo hice ingresando el numero 23 para verificar que sea Evening
+5. el ultimo test lo hice ingresando el numero 28 para verificar que sea Invalid Hour
